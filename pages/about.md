@@ -5,7 +5,9 @@ order: 1
 object-id: about
 permalink: /about.html
 ---
-# About {{site.title}}
+# About {{site.title}} 
+
+This is the Oral History as Data demo site. It features the transcripts and visualizations from [CTRL+Shift](https://ctrl-shift.org/) as its content. 
 
 The Oral History as Data (OHD) tool is a static website generator that allows users to analyze and publish coded oral history or qualitative interview files. By turning transcriptions into tagged/coded CSV files, adding a list of filters, and creating a simple markdown file for each interview (to be included in the _transcripts collection), OHD will provide filterable transcripts and a color coded visualization for all transcripts included. 
 
