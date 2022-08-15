@@ -21,9 +21,10 @@ Use this template site and the demo files included as examples for your own data
 
 More fully developed documentation for this site is being developed, but there are several places to get you started including documentation developed for the first version of this project. 
 
+- [The Oral History as Data lesson plan](https://learn-static.github.io/oral-history-as-data/) will walk you through setting up a site. The site is built with instructors and students in mind. If you're doing this on your own, just be both! Start with the "For Instructors" section and then follow the other sections to build your site. 
+
 - Detailed How To instructions can be found on [the first iteration of the project's website](https://uidaholib.github.io/oral-history-as-data/). 
     - Everything should work the same; just use the [newer github repository](https://github.com/oralhistoryasdata/oralhistoryasdata.github.io/) as your template.
-- There is also [an Oral History as Data lesson plan](https://learn-static.github.io/oral-history-as-data/) that walks students and an instructor through setting up a site. Start with the "For Instructors" section and then follow the other sections to build your site. 
 
 - This site is built on CollectionBuilder-GH, so the [CollectionBuilder documentation](https://collectionbuilder.github.io/cb-docs/) will help you do things like:
     - [download software to develop this locally](https://collectionbuilder.github.io/cb-docs/docs/software/)
