@@ -27,16 +27,11 @@
 <!-- load custom css last to allow overrides -->
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" type="text/css">
 
-{% comment %} 
-    Meta tags and analytics are adding during production build ONLY.
-    Production build environment is automatically used on gh-pages. 
-{% endcomment %}
-{%- if jekyll.environment == "production" -%}
+
 {% if site.noindex == true or page.noindex == true or layout.noindex == true %}<meta name="robots" content="noindex">{% endif %}
 {% include head/page-meta.html %}
 {% include head/analytics.html %}
 
-{% endif %}
 {% include head/filter-style.html %}
 
 
