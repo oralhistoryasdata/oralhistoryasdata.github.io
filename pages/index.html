@@ -1,0 +1,648 @@
+---
+title: Oral History as Data
+permalink: /
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oral History as Data | Transform Your Interviews into Interactive Digital Collections</title>
+    {% include head/head.html %}
+    <style>
+:root {
+    --primary: #008080;    /* Teal */
+    --secondary: #3cb44b;  /* Green */
+    --accent: #4363d8;     /* Blue */
+    --highlight: #46f0f0;  /* Cyan */
+    --neutral: #808000;    /* Olive */
+    --light: #f8f9fa;
+    --dark: #000000;
+}
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--accent);
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('/api/placeholder/1200/600') center center no-repeat;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: var(--highlight);
+            border-color: var(--highlight);
+            color: white;
+        }
+        
+        .btn-outline-light {
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: var(--neutral);
+            border-color: var(--neutral);
+            color: var(--dark);
+        }
+        
+        .card {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .text-center .section-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .workflow-step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 2rem;
+        }
+        
+        .workflow-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            border: 2px solid var(--highlight);
+        }
+        
+        .testimonial {
+            background-color: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 5px;
+            position: relative;
+            border-left: 4px solid var(--highlight);
+        }
+        
+        .testimonial::before {
+            content: """;
+            font-size: 6rem;
+            font-family: Georgia, serif;
+            color: rgba(255,255,255,0.1);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+        
+        .demo-img {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-img:hover {
+            transform: scale(1.02);
+        }
+        
+        footer {
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            padding: 3rem 0;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--neutral);
+        }
+        
+        .card {
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--light);
+        }
+        
+        .card-img-top {
+            border-bottom: 3px solid var(--accent);
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="display:flex; align-items:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor"
+                    class="bi bi-soundwave me-3" viewBox="0 0 16 16" style="width: 2em;height: 2em;">
+                    <path fill-rule="evenodd"
+                        d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z" />
+                </svg>
+                <strong>Oral History as Data</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#workflow">Workflow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#collection-builder">CollectionBuilder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#showcase">Showcase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#get-started">Get Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://oralhistoryasdata.github.io/docs/" target="_blank">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold mb-4">Transform Your Interview Transcripts into Interactive Digital Collections</h1>
+                    <p class="lead mb-4">Oral History as Data (OHD) is a free, open-source framework for publishing, analyzing, and visualizing coded oral history interviews.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#get-started" class="btn btn-accent btn-lg px-4 me-md-2">Get Started</a>
+                        <a href="https://oralhistoryasdata.github.io/template/" class="btn btn-outline-light btn-lg px-4" target="_blank">View Demo</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="/assets/img/ohd2.gif" alt="Oral History as Data visualization example" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Built on CollectionBuilder</h3>
+                    <p>A fully-featured digital exhibit site for oral histories, interviews, and all your other items as well.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Interactive Visualizations</h3>
+                    <p>Analyze interview content through powerful color-coded thematic visualizations.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Free & Open Source</h3>
+                    <p>Built on GitHub Pages and Jekyll - host your project for free with no ongoing costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-dark" id="features">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 text-white">Powerful Features for Oral History Research</h2>
+            
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3><i class="fas fa-tags text-primary me-2"></i> Thematic Coding System</h3>
+                            <p>Apply your own analytical codes to transcripts. OHD automatically transforms these into an interactive color-coded visualization that reveals patterns across your interviews.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Custom tag creation</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Visual theme analysis</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Interactive filtering by theme</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3><i class="fas fa-file-csv text-primary me-2"></i> CSV-Driven Workflow</h3>
+                            <p>Manage all your interview transcripts through simple spreadsheets. Add speaker identifications, thematic tags, and timestamps using familiar tools like Google Sheets or Excel.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Simple CSV format</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Work with familiar spreadsheet tools</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Batch upload multiple interviews</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3><i class="fas fa-headphones text-primary me-2"></i> Media Integration</h3>
+                            <p>Connect transcript segments with synchronized audio or video recordings. Support for YouTube, Vimeo, SoundCloud, and MP3 files with timestamp navigation.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Timestamp synchronization</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Multiple media sources supported</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Jump to specific interview moments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3><i class="fas fa-mobile-alt text-primary me-2"></i> Responsive Design</h3>
+                            <p>Your oral history collection works beautifully across all devices - from desktop computers to tablets and smartphones. Provide access to your research wherever your audience is.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Mobile-friendly interface</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Accessible design</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Built on Bootstrap framework</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="py-5 bg-light" id="workflow">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Simple Workflow from Transcript to Publication</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="workflow-step">
+                        <div class="workflow-number">1</div>
+                        <h3>Prepare Your Transcripts</h3>
+                        <p>Format your interview transcripts into a simple CSV structure with columns for speaker, words, and optional tags. Use familiar tools like Google Sheets or Excel.</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="workflow-number">2</div>
+                        <h3>Set Up Your Repository</h3>
+                        <p>Click "Use This Template" on GitHub to create your own project repository. No coding skills required - everything is pre-configured and ready to use.</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="workflow-number">3</div>
+                        <h3>Upload Your Data</h3>
+                        <p>Add your transcript CSVs to the repository and create a simple metadata file for each interview. Link to audio/video sources if available.</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="workflow-number">4</div>
+                        <h3>Customize & Publish</h3>
+                        <p>Adjust the site configuration, add your project information, and enable GitHub Pages. Your interactive oral history collection is now live on the web!</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                    <img src="/api/placeholder/500/500" alt="Oral History as Data workflow diagram" class="img-fluid rounded demo-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="py-5" id="showcase">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Featured Projects Built with OHD</h2>
+            
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="/api/placeholder/400/225" class="card-img-top" alt="Voices of Gay Rodeo project screenshot">
+                        <div class="card-body">
+                            <h4>Voices of Gay Rodeo</h4>
+                            <p>A collection documenting the experiences of LGBTQ+ participants in western rodeo culture and sport through detailed interviews.</p>
+                            <a href="https://www.voicesofgayrodeo.com/" class="btn btn-outline-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="/api/placeholder/400/225" class="card-img-top" alt="Idaho Queered project screenshot">
+                        <div class="card-body">
+                            <h4>Idaho Queered</h4>
+                            <p>Exploring LGBTQ+ history and experiences in Idaho through oral histories and thematic analysis.</p>
+                            <a href="https://www.lib.uidaho.edu/queered/" class="btn btn-outline-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="/api/placeholder/400/225" class="card-img-top" alt="CTRL+Shift project screenshot">
+                        <div class="card-body">
+                            <h4>CTRL+Shift</h4>
+                            <p>Examining the evolution of digital practices and creative workflows in the humanities field.</p>
+                            <a href="https://ctrl-shift.org/" class="btn btn-outline-primary" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="lead">Hundreds of researchers and institutions trust OHD for their digital oral history projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CollectionBuilder Integration Section -->
+    <section class="py-5" id="collection-builder">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Built on CollectionBuilder</h2>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/api/placeholder/500/350" alt="CollectionBuilder Logo and Features" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Leveraging the Power of CollectionBuilder</h3>
+                    <p class="lead mb-4">Oral History as Data is built on top of CollectionBuilder, giving you all the additional capabilities of this powerful digital collection framework:</p>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-3 text-highlight">
+                            <i class="fas fa-check-circle" style="color: var(--highlight); font-size: 1.25rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Metadata-Driven Websites</h5>
+                            <p>Create beautiful digital collections using just spreadsheets and digital files</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle" style="color: var(--highlight); font-size: 1.25rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Lightweight Infrastructure</h5>
+                            <p>Static sites that require no databases or server-side processing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle" style="color: var(--highlight); font-size: 1.25rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Customizable Visualizations</h5>
+                            <p>Interactive timelines, maps, item galleries, and browsing interfaces</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="me-3">
+                            <i class="fas fa-check-circle" style="color: var(--highlight); font-size: 1.25rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Data as a Service</h5>
+                            <p>Your collection is available in multiple open data formats (CSV, JSON)</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://collectionbuilder.github.io/" class="btn btn-outline-light" target="_blank">
+                        <i class="fas fa-external-link-alt me-2"></i> Learn More About CollectionBuilder
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Get Started Section -->
+    <section class="py-5" id="get-started">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">Ready to Build Your Oral History Project?</h2>
+                    <p class="lead">Follow these simple steps to create your own interactive oral history collection:</p>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-primary text-white rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div>
+                            <h4>Use Our Template</h4>
+                            <p>Start by clicking "Use This Template" in our GitHub repository to create your own copy.</p>
+                            <a href="https://github.com/oralhistoryasdata/template" class="btn btn-primary mb-4" target="_blank">
+                                <i class="fab fa-github me-2"></i> GitHub Template
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-primary text-white rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div>
+                            <h4>Read the Documentation</h4>
+                            <p>Our comprehensive documentation walks you through every step of the process.</p>
+                            <a href="https://oralhistoryasdata.github.io/docs/" class="btn btn-primary mb-4" target="_blank">
+                                <i class="fas fa-book-open me-2"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-start">
+                        <div class="bg-primary text-white rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h4>Explore the Demo</h4>
+                            <p>See OHD in action with our demo site featuring sample interviews and visualizations.</p>
+                            <a href="https://oralhistoryasdata.github.io/template/" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-eye me-2"></i> View Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card bg-light border-0 p-4">
+                        <div class="card-body">
+                            <h3 class="mb-4">Join the OHD Community</h3>
+                            <p>Sign up for our newsletter to receive:</p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check-circle text-success me-2"></i> New feature announcements</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Tutorial videos and guides</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Showcase of new OHD projects</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i> Tips and best practices</li>
+                            </ul>
+                            
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+                                </div>
+                                <button type="submit" class="btn btn-accent w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Oral History as Data</h4>
+                    <p>A project of the University of Idaho Library's Center for Digital Inquiry and Learning (CDIL).</p>
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/oralhistoryasdata/template" class="text-white">GitHub Repository</a></li>
+                        <li><a href="https://oralhistoryasdata.github.io/docs/" class="text-white">Documentation</a></li>
+                        <li><a href="https://oralhistoryasdata.github.io/template/" class="text-white">Demo Site</a></li>
+                        <li><a href="https://cdil.lib.uidaho.edu/" class="text-white">CDIL</a></li>
+                        <li><a href="https://lib-static.github.io/" class="text-white">Lib-STATIC</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h4>Related Projects</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://collectionbuilder.github.io/" class="text-white">CollectionBuilder</a></li>
+                        <li><a href="https://www.voicesofgayrodeo.com/" class="text-white">Voices of Gay Rodeo</a></li>
+                        <li><a href="https://www.lib.uidaho.edu/queered/" class="text-white">Idaho Queered</a></li>
+                        <li><a href="https://ctrl-shift.org/" class="text-white">CTRL+Shift</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light">
+            
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Oral History as Data. Released under <a href="https://opensource.org/licenses/MIT" class="text-white">MIT License</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
