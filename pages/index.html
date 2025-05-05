@@ -15,7 +15,7 @@ permalink: /
 :root {
     --primary: #008080;    /* Teal */
     --secondary: #3cb44b;  /* Green */
-    --accent: #3c8eae;     /* Blue */
+    --accent: #24576A;     /* Blue */
     --highlight: #49b5b5;  /* Cyan */
     --neutral: #845884;    /* Olive */
     --light: #f8f9fa;
@@ -243,7 +243,7 @@ permalink: /
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="maincontent" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#" style="display:flex; align-items:center;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor"
@@ -253,7 +253,7 @@ permalink: /
                 </svg>
                 <strong>Oral History as Data</strong>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -289,8 +289,8 @@ permalink: /
                     <h1 class="display-4 fw-bold mb-4">Transform Your Interview Transcripts into Interactive Digital Collections</h1>
                     <p class="lead mb-4">Oral History as Data (OHD) is a free, open-source framework for publishing, analyzing, and visualizing coded oral history interviews.</p>
                     <div class="d-flex flex-wrap gap-2">
-                        <a href="#get-started" class="btn btn-accent btn-lg px-4 me-md-2">Get Started</a>
-                        <a href="https://oralhistoryasdata.github.io/template/" class="btn btn-outline-light btn-lg px-4" target="_blank">View Demo</a>
+                        <a href="#get-started" class="btn btn-accent btn-lg px-4 me-md-2" role="button" alt="jump to get started section">Get Started</a>
+                        <a href="https://oralhistoryasdata.github.io/template/" class="btn btn-outline-light btn-lg px-4" target="_blank" aria-label="View Demo site (opens in new tab)">View Demo</a>
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-block">
@@ -446,7 +446,7 @@ permalink: /
                         <div class="card-body">
                             <h4>Voices of Gay Rodeo</h4>
                             <p>A collection documenting the experiences of LGBTQ+ participants in western rodeo culture and sport through detailed interviews.</p>
-                            <a href="https://www.voicesofgayrodeo.com/" class="btn btn-outline-primary stretched-link" target="_blank">View Project</a>
+                            <a href="https://www.voicesofgayrodeo.com/" class="btn btn-outline-primary stretched-link" target="_blank" aria-label="View Voices of Gay Rodeo Project (opens in new tab)">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -454,11 +454,11 @@ permalink: /
                 <!-- Project 2 -->
                 <div class="col-md-6 mb-4">
                     <div class="card h-100">
-                        <img src="assets/img/taylor.png" class="card-img-top" alt="Idaho Queered project screenshot">
+                        <img src="assets/img/taylor.png" class="card-img-top" alt="Taylor Wilderness Research Station Archives project screenshot">
                         <div class="card-body">
                             <h4>Taylor Wilderness Research Station Archives</h4>
                             <p>Featuring interviews with Wilderness Researchers, Students, and Caretakers</p>
-                            <a href="https://www.lib.uidaho.edu/digital/taylor-archive/oral_histories/" class="btn btn-outline-primary stretched-link" target="_blank">View Project</a>
+                            <a href="https://www.lib.uidaho.edu/digital/taylor-archive/oral_histories/" class="btn btn-outline-primary stretched-link" target="_blank" aria-label="View Taylor Wilderness Research Station Archives Project (opens in new tab)">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -470,7 +470,7 @@ permalink: /
                         <div class="card-body">
                             <h4>CTRL+Shift</h4>
                             <p>Examining the evolution of digital practices and creative workflows in the humanities field.</p>
-                            <a href="https://ctrl-shift.org/" class="btn btn-outline-primary stretched-link" target="_blank">View Project</a>
+                            <a href="https://ctrl-shift.org/" class="btn btn-outline-primary stretched-link" target="_blank" aria-label="View CTRL+Shift Project (opens in new tab)">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -478,11 +478,11 @@ permalink: /
                 <!-- Project 4 -->
                 <div class="col-md-6 mb-4">
                     <div class="card h-100">
-                        <img src="assets/img/context.png" class="card-img-top" alt="CTRL+Shift project screenshot">
+                        <img src="assets/img/context.png" class="card-img-top" alt="100+ Podcast Collection project screenshot">
                         <div class="card-body">
                             <h4>100+ Podcast Collection</h4>
                             <p>A LARGE collection of podcasts automatically tagged and presented as JSON files.</p>
-                            <a href="https://www.lib.uidaho.edu/digital/context/tags/visualization.html" class="btn btn-outline-primary stretched-link" target="_blank">View Project</a>
+                            <a href="https://www.lib.uidaho.edu/digital/context/tags/visualization.html" class="btn btn-outline-primary stretched-link" target="_blank" aria-label="View 100+ Podcast Collection Project (opens in new tab)">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -494,7 +494,7 @@ permalink: /
     <!-- CollectionBuilder Integration Section -->
     <section class="py-5" id="collection-builder">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Built on <a href="https://collectionbuilder.github.io/" class="text-warning">CollectionBuilder</a></h2>
+            <h2 class="section-title text-center mb-5">Built on <a href="https://collectionbuilder.github.io/" class="text-warning bg-dark p-3 border rounded-3">CollectionBuilder</a></h2>
             
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -544,7 +544,7 @@ permalink: /
                         </div>
                     </div>
                     
-                    <a href="https://collectionbuilder.github.io/" class="btn btn-accent" target="_blank">
+                    <a href="https://collectionbuilder.github.io/" class="btn btn-accent" target="_blank" aria-label="Learn More About CollectionBuilder (opens in new tab)">
                         <i class="fas fa-external-link-alt me-2"></i> Learn More About CollectionBuilder
                     </a>
                 </div>
@@ -567,7 +567,7 @@ permalink: /
                         <div>
                             <h4>Use Our Template</h4>
                             <p>Start by clicking "Use This Template" in our GitHub repository to create your own copy.</p>
-                            <a href="https://github.com/oralhistoryasdata/template" class="btn btn-outline-primary mb-4" target="_blank">
+                            <a href="https://github.com/oralhistoryasdata/template" class="btn btn-outline-primary mb-4" target="_blank" aria-label="View GitHub Template repository (opens in new tab)">
                                 <i class="fab fa-github me-2"></i> GitHub Template
                             </a>
                         </div>
@@ -580,7 +580,7 @@ permalink: /
                         <div>
                             <h4>Read the Documentation</h4>
                             <p>Our comprehensive documentation walks you through every step of the process.</p>
-                            <a href="https://oralhistoryasdata.github.io/docs/" class="btn btn-outline-primary  mb-4" target="_blank">
+                            <a href="https://oralhistoryasdata.github.io/docs/" class="btn btn-outline-primary  mb-4" target="_blank" aria-label="View Documentation (opens in new tab)">
                                 <i class="fas fa-book-open me-2"></i> Documentation
                             </a>
                         </div>
@@ -593,7 +593,7 @@ permalink: /
                         <div>
                             <h4>Explore the Demo</h4>
                             <p>See OHD in action with our demo site featuring sample interviews and visualizations.</p>
-                            <a href="https://oralhistoryasdata.github.io/template/" class="btn btn-outline-primary " target="_blank">
+                            <a href="https://oralhistoryasdata.github.io/template/" class="btn btn-outline-primary " target="_blank" aria-label="View Demo site (opens in new tab)">
                                 <i class="fas fa-eye me-2"></i> View Demo
                             </a>
                         </div>
@@ -679,4 +679,6 @@ permalink: /
         slideInElements.forEach(el => observer.observe(el));
     </script>
 </body>
+{% include scroll-to-top.html %}
+
 </html>
